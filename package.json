@@ -58,7 +58,7 @@
     "standard-version": "^7.1.0",
     "ts-jest": "^25.5.1",
     "ts-node": "^8.10.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.5"
   },
   "dependencies": {
     "chokidar": "^3.3.1",
