@@ -70,8 +70,8 @@
     ]
   },
   "scripts": {
-    "dev:cli": "ts-node src/lib/dev",
-    "build": "rimraf dist && tsc --project tsconfig.build.json",
+    "dev": "npm run build && node dist/lib/dev.js",
+    "build": "node -e \"require('fs').rmdirSync('dist', { recursive: true })\" && tsc --project tsconfig.build.json",
     "release": "standard-version --skip.tag",
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
@@ -95,10 +95,8 @@
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^25.5.4",
     "prettier": "^2.0.5",
-    "rimraf": "^3.0.2",
     "standard-version": "^8.0.1",
     "ts-jest": "^25.5.1",
-    "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
   },
   "dependencies": {
