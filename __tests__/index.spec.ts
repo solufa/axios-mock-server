@@ -239,15 +239,28 @@ describe('initialize', () => {
     expect(data).toEqual(name)
   })
 
+  test('response 401 error', async () => {
+    const testPath = '/test'
+    const status = 401
+    const route: MockRoute = [{ path: testPath, methods: { get: () => [status] } }]
+
+    mock.setRoute(route)
+    await expect(client.get(testPath)).rejects.toHaveProperty('response.status', status)
+  })
+
+  test('response 500 error', async () => {
+    const testPath = '/test'
+    const status = 500
+    const route: MockRoute = [{ path: testPath, methods: { get: () => [status] } }]
+
+    mock.setRoute(route)
+    await expect(client.get(testPath)).rejects.toHaveProperty('response.status', status)
+  })
+
   test('set delayTime', async () => {
     const delayTime = 500
     const testPath = '/test'
-    const route: MockRoute = [
-      {
-        path: testPath,
-        methods: { get: () => [204] }
-      }
-    ]
+    const route: MockRoute = [{ path: testPath, methods: { get: () => [204] } }]
 
     mock.setRoute(route).setDelayTime(delayTime)
     const startTime = Date.now()
@@ -315,12 +328,7 @@ describe('initialize', () => {
   test('enable log', async () => {
     const spyLog = jest.spyOn(console, 'log').mockImplementation(x => x)
     const testPath = '/test'
-    const route: MockRoute = [
-      {
-        path: testPath,
-        methods: { get: () => [204] }
-      }
-    ]
+    const route: MockRoute = [{ path: testPath, methods: { get: () => [204] } }]
 
     mock.setRoute(route).enableLog()
     await client.get(testPath)
