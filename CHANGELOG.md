@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.17.1](https://github.com/solufa/axios-mock-server/compare/v0.17.0...v0.17.1) (2020-07-21)
+
+
+### Bug Fixes
+
+* type of makeResponse ([9ed59a9](https://github.com/solufa/axios-mock-server/commit/9ed59a9069fe65b72ae7e2cc1f1e0e97badba072))
+
 ## [0.17.0](https://github.com/solufa/axios-mock-server/compare/v0.16.3...v0.17.0) (2020-07-21)
 
 
