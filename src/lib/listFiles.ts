@@ -1,20 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 
-const listFiles = (mockDir: string) => {
-  const list: string[] = []
-
-  fs.readdirSync(mockDir).forEach(file => {
-    const target = path.posix.join(mockDir, file)
-
-    if (fs.statSync(target).isFile()) {
-      list.push(target)
-    } else if (fs.statSync(target).isDirectory()) {
-      list.push(...listFiles(target))
-    }
+export const listFiles = (targetDir: string): string[] =>
+  fs.readdirSync(targetDir, { withFileTypes: true }).flatMap(dirent => {
+    const target = path.posix.join(targetDir, dirent.name)
+    return dirent.isFile() ? [target] : listFiles(target)
   })
-
-  return list
-}
-
-export default listFiles

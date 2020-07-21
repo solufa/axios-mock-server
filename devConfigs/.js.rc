@@ -1,0 +1,5 @@
+{
+  "input": "__tests__/lib/mocks",
+  "target": "cjs",
+  "outputExt": "js"
+}

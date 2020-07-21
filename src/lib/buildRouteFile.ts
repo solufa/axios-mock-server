@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { Config, defaultConfig, mockFileRegExp } from './getConfig'
-import listFiles from './listFiles'
+import { listFiles } from './listFiles'
 import createRouteString from './createRouteString'
 
 const getTarget = (filePath?: string) =>

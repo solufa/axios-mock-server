@@ -1,18 +1,30 @@
 {
   "name": "axios-mock-server",
-  "version": "0.16.3",
+  "version": "0.17.0",
   "description": "RESTful mock server using axios",
-  "author": "m-mitsuhide <m.mitsuhide@amatelus.com>",
+  "author": "Solufa <solufa2020@gmail.com>",
   "license": "MIT",
   "main": "dist/index.js",
   "bin": "bin/index.js",
-  "homepage": "https://github.com/m-mitsuhide/axios-mock-server#readme",
+  "scripts": {
+    "dev": "npm run build && node bin/index.js -c devConfigs/.js.rc -b -u https://example.com/api && node bin/index.js -c devConfigs/.ts.rc -b -u https://example.com/api",
+    "build": "node -e \"require('fs').rmdirSync('dist', { recursive: true })\" && tsc --project tsconfig.build.json",
+    "release": "standard-version --skip.tag",
+    "release:major": "npm run release -- --release-as major",
+    "release:minor": "npm run release -- --release-as minor",
+    "release:patch": "npm run release -- --release-as patch",
+    "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
+    "lint:fix": "npm run lint -- --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "jest"
+  },
+  "homepage": "https://github.com/solufa/axios-mock-server#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/m-mitsuhide/axios-mock-server.git"
+    "url": "git+https://github.com/solufa/axios-mock-server.git"
   },
   "bugs": {
-    "url": "https://github.com/m-mitsuhide/axios-mock-server/issues"
+    "url": "https://github.com/solufa/axios-mock-server/issues"
   },
   "files": [
     "dist"
@@ -22,47 +34,77 @@
     "test",
     "mock"
   ],
-  "scripts": {
-    "dev:cli": "ts-node src/lib/dev",
-    "build": "rimraf dist && tsc --project tsconfig.build.json",
-    "release": "standard-version --skip.tag",
-    "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
-    "lint:fix": "npm run lint -- --fix",
-    "test": "jest",
-    "test:watch": "npm test -- --watch",
-    "test:types": "tsc --noEmit",
-    "test:types:watch": "tsc --watch --noEmit"
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    },
+    "extends": [
+      "standard",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:jest/recommended",
+      "plugin:prettier/recommended",
+      "prettier/@typescript-eslint",
+      "prettier/standard"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "root": true,
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-var-requires": "off",
+      "@typescript-eslint/ban-types": "off",
+      "@typescript-eslint/camelcase": "off",
+      "@typescript-eslint/no-explicit-any": "off"
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "arrowParens": "avoid",
+    "singleQuote": true,
+    "trailingComma": "none",
+    "overrides": [
+      {
+        "files": [
+          "*.md",
+          "*.yml"
+        ],
+        "options": {
+          "singleQuote": false
+        }
+      }
+    ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.2.0",
-    "@types/jest": "^24.0.22",
+    "@types/jest": "^26.0.5",
     "@types/minimist": "^1.2.0",
-    "@typescript-eslint/eslint-plugin": "^2.6.1",
-    "@typescript-eslint/parser": "^2.6.1",
-    "axios": "^0.19.0",
-    "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^23.0.2",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-prettier": "^3.1.1",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "axios": "^0.19.2",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.18.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "husky": "^3.0.9",
-    "jest": "^24.9.0",
-    "lint-staged": "^9.4.2",
-    "prettier": "^1.18.2",
-    "rimraf": "^3.0.0",
-    "standard-version": "^7.0.0",
-    "ts-jest": "^24.1.0",
-    "ts-node": "^8.4.1",
-    "typescript": "^3.7.2"
+    "jest": "^25.5.4",
+    "prettier": "^2.0.5",
+    "standard-version": "^8.0.1",
+    "ts-jest": "^25.5.1",
+    "typescript": "^3.9.7"
   },
   "dependencies": {
-    "chokidar": "^3.3.0",
-    "minimist": "^1.2.0",
-    "url-search-params-polyfill": "^7.0.0"
+    "chokidar": "^3.4.1",
+    "minimist": "^1.2.5",
+    "url-search-params-polyfill": "^8.1.0"
   }
 }
