@@ -1,0 +1,5 @@
+{
+  "input": "__tests__/lib/mocks",
+  "target": "es6",
+  "outputExt": "ts"
+}

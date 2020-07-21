@@ -70,7 +70,7 @@
     ]
   },
   "scripts": {
-    "dev": "npm run build && node dist/lib/dev.js",
+    "dev": "npm run build && node bin/index.js -c devConfigs/.js.rc -b -u https://example.com/api && node bin/index.js -c devConfigs/.ts.rc -b -u https://example.com/api",
     "build": "node -e \"require('fs').rmdirSync('dist', { recursive: true })\" && tsc --project tsconfig.build.json",
     "release": "standard-version --skip.tag",
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
