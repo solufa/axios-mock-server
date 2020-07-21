@@ -1,6 +1,6 @@
 <p align="right">
-  <a href="https://github.com/m-mitsuhide/axios-mock-server#readme">🇺🇸English</a> |
-  <a href="https://github.com/m-mitsuhide/axios-mock-server/blob/develop/docs/ja/README.md">🇯🇵日本語</a>
+  <a href="https://github.com/solufa/axios-mock-server#readme">🇺🇸English</a> |
+  <a href="https://github.com/solufa/axios-mock-server/blob/develop/docs/ja/README.md">🇯🇵日本語</a>
 </p>
 
 <h1>axios-mock-server</h1>
@@ -193,13 +193,13 @@ axios-mock-server は **ブラウザーでの利用** から **データの永�
 <details>
 <summary><b>使用例の一覧を見る</b></summary>
 
-- **[browser](https://github.com/m-mitsuhide/axios-mock-server/tree/develop/examples/browser)**:
+- **[browser](https://github.com/solufa/axios-mock-server/tree/develop/examples/browser)**:
   ブラウザーでの使用例
-- **[node](https://github.com/m-mitsuhide/axios-mock-server/tree/develop/examples/node)**:
+- **[node](https://github.com/solufa/axios-mock-server/tree/develop/examples/node)**:
   [Node.js][nodejs]（CommonJS）での使用例
-- **[with-nuxtjs](https://github.com/m-mitsuhide/axios-mock-server/tree/develop/examples/with-nuxtjs)**:
+- **[with-nuxtjs](https://github.com/solufa/axios-mock-server/tree/develop/examples/with-nuxtjs)**:
   [Nuxt.js][nuxtjs] での使用例
-- **[with-typescript](https://github.com/m-mitsuhide/axios-mock-server/tree/develop/examples/with-typescript)**:
+- **[with-typescript](https://github.com/solufa/axios-mock-server/tree/develop/examples/with-typescript)**:
   [TypeScript][typescript] での使用例
 
 **WIP**
@@ -530,20 +530,20 @@ axios-mock-server は [MIT License][axios-mock-server-license] のもとで利�
 
 <!-- URL: axios-mock-server -->
 
-[axios-mock-server-examples]: https://github.com/m-mitsuhide/axios-mock-server/tree/develop/examples
-[axios-mock-server-license]: https://github.com/m-mitsuhide/axios-mock-server/blob/develop/LICENSE
+[axios-mock-server-examples]: https://github.com/solufa/axios-mock-server/tree/develop/examples
+[axios-mock-server-license]: https://github.com/solufa/axios-mock-server/blob/develop/LICENSE
 
 <!-- URL: Badges -->
 
 [badge-bundlephobia-url]: https://bundlephobia.com/result?p=axios-mock-server@latest
 [badge-bundlephobia]: https://img.shields.io/bundlephobia/min/axios-mock-server
-[badge-ci-url]: https://circleci.com/gh/m-mitsuhide/axios-mock-server
-[badge-ci]: https://img.shields.io/circleci/build/github/m-mitsuhide/axios-mock-server.svg?label=test
-[badge-coverage-url]: https://codecov.io/gh/m-mitsuhide/axios-mock-server
-[badge-coverage]: https://img.shields.io/codecov/c/github/m-mitsuhide/axios-mock-server.svg
-[badge-dependabot]: https://api.dependabot.com/badges/status?host=github&repo=m-mitsuhide/axios-mock-server
-[badge-lgtm-url]: https://lgtm.com/projects/g/m-mitsuhide/axios-mock-server/context:javascript
-[badge-lgtm]: https://img.shields.io/lgtm/grade/javascript/g/m-mitsuhide/axios-mock-server.svg
+[badge-ci-url]: https://circleci.com/gh/solufa/axios-mock-server
+[badge-ci]: https://img.shields.io/circleci/build/github/solufa/axios-mock-server.svg?label=test
+[badge-coverage-url]: https://codecov.io/gh/solufa/axios-mock-server
+[badge-coverage]: https://img.shields.io/codecov/c/github/solufa/axios-mock-server.svg
+[badge-dependabot]: https://api.dependabot.com/badges/status?host=github&repo=solufa/axios-mock-server
+[badge-lgtm-url]: https://lgtm.com/projects/g/solufa/axios-mock-server/context:javascript
+[badge-lgtm]: https://img.shields.io/lgtm/grade/javascript/g/solufa/axios-mock-server.svg
 [badge-license]: https://img.shields.io/npm/l/axios-mock-server
 [badge-npm-url]: https://www.npmjs.com/package/axios-mock-server
 [badge-npm]: https://img.shields.io/npm/v/axios-mock-server

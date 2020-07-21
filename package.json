@@ -2,17 +2,17 @@
   "name": "axios-mock-server",
   "version": "0.16.3",
   "description": "RESTful mock server using axios",
-  "author": "m-mitsuhide <m.mitsuhide@amatelus.com>",
+  "author": "Solufa <solufa2020@gmail.com>",
   "license": "MIT",
   "main": "dist/index.js",
   "bin": "bin/index.js",
-  "homepage": "https://github.com/m-mitsuhide/axios-mock-server#readme",
+  "homepage": "https://github.com/solufa/axios-mock-server#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/m-mitsuhide/axios-mock-server.git"
+    "url": "git+https://github.com/solufa/axios-mock-server.git"
   },
   "bugs": {
-    "url": "https://github.com/m-mitsuhide/axios-mock-server/issues"
+    "url": "https://github.com/solufa/axios-mock-server/issues"
   },
   "files": [
     "dist"
