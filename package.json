@@ -22,6 +22,53 @@
     "test",
     "mock"
   ],
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    },
+    "extends": [
+      "standard",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:jest/recommended",
+      "plugin:prettier/recommended",
+      "prettier/@typescript-eslint",
+      "prettier/standard"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "root": true,
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-var-requires": "off",
+      "@typescript-eslint/ban-types": "off",
+      "@typescript-eslint/camelcase": "off",
+      "@typescript-eslint/no-explicit-any": "off"
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "arrowParens": "avoid",
+    "singleQuote": true,
+    "trailingComma": "none",
+    "overrides": [
+      {
+        "files": [
+          "*.md",
+          "*.yml"
+        ],
+        "options": {
+          "singleQuote": false
+        }
+      }
+    ]
+  },
   "scripts": {
     "dev:cli": "ts-node src/lib/dev",
     "build": "rimraf dist && tsc --project tsconfig.build.json",
@@ -37,7 +84,7 @@
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "axios": "^0.19.2",
-    "eslint": "^6.8.0",
+    "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.0",
@@ -47,7 +94,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^25.5.4",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "standard-version": "^8.0.1",
     "ts-jest": "^25.5.1",
