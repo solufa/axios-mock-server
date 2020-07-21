@@ -1,11 +1,23 @@
 {
   "name": "axios-mock-server",
-  "version": "0.16.3",
+  "version": "0.17.0",
   "description": "RESTful mock server using axios",
   "author": "Solufa <solufa2020@gmail.com>",
   "license": "MIT",
   "main": "dist/index.js",
   "bin": "bin/index.js",
+  "scripts": {
+    "dev": "npm run build && node bin/index.js -c devConfigs/.js.rc -b -u https://example.com/api && node bin/index.js -c devConfigs/.ts.rc -b -u https://example.com/api",
+    "build": "node -e \"require('fs').rmdirSync('dist', { recursive: true })\" && tsc --project tsconfig.build.json",
+    "release": "standard-version --skip.tag",
+    "release:major": "npm run release -- --release-as major",
+    "release:minor": "npm run release -- --release-as minor",
+    "release:patch": "npm run release -- --release-as patch",
+    "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
+    "lint:fix": "npm run lint -- --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "jest"
+  },
   "homepage": "https://github.com/solufa/axios-mock-server#readme",
   "repository": {
     "type": "git",
@@ -68,15 +80,6 @@
         }
       }
     ]
-  },
-  "scripts": {
-    "dev": "npm run build && node bin/index.js -c devConfigs/.js.rc -b -u https://example.com/api && node bin/index.js -c devConfigs/.ts.rc -b -u https://example.com/api",
-    "build": "node -e \"require('fs').rmdirSync('dist', { recursive: true })\" && tsc --project tsconfig.build.json",
-    "release": "standard-version --skip.tag",
-    "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
-    "lint:fix": "npm run lint -- --fix",
-    "typecheck": "tsc --noEmit",
-    "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^26.0.5",

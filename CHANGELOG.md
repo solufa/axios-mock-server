@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.17.0](https://github.com/solufa/axios-mock-server/compare/v0.16.3...v0.17.0) (2020-07-21)
+
+
+### Bug Fixes
+
+* **deps:** [security] bump acorn from 6.4.0 to 6.4.1 ([2c96445](https://github.com/solufa/axios-mock-server/commit/2c96445028e42d623125794ed40b2075ac740458))
+* **deps:** bump chokidar from 3.3.0 to 3.3.1 ([1e8a5c4](https://github.com/solufa/axios-mock-server/commit/1e8a5c42704b37ef055d587a282612ef9b223969))
+* **deps:** bump chokidar from 3.3.1 to 3.4.1 ([6803a34](https://github.com/solufa/axios-mock-server/commit/6803a347589c4a42bc2a4b3b7c068b9948ff4281))
+* **deps:** bump minimist from 1.2.0 to 1.2.1 ([166598b](https://github.com/solufa/axios-mock-server/commit/166598bedf1cefa737624b2c0226575cc09c1d90))
+* **deps:** bump minimist from 1.2.1 to 1.2.2 ([858137a](https://github.com/solufa/axios-mock-server/commit/858137a3cfd15aa1af8a0f7942fbb0393a017f23))
+* **deps:** bump minimist from 1.2.2 to 1.2.3 ([62424c0](https://github.com/solufa/axios-mock-server/commit/62424c0d6a4fd38ab49e7529ce7a822d757c0df7))
+* **deps:** bump minimist from 1.2.3 to 1.2.4 ([2e37d82](https://github.com/solufa/axios-mock-server/commit/2e37d82681b3c558dfb81c97cada2359cc987290))
+* **deps:** bump minimist from 1.2.4 to 1.2.5 ([cf16377](https://github.com/solufa/axios-mock-server/commit/cf1637752240ca45ac525bb91c2bf4eb146c806c))
+* **deps:** bump url-search-params-polyfill from 7.0.0 to 7.0.1 ([02a074a](https://github.com/solufa/axios-mock-server/commit/02a074ae47996ede7c80a6bdeb7f67cbf4510210))
+* **deps:** bump url-search-params-polyfill from 7.0.1 to 8.0.0 ([cc23d81](https://github.com/solufa/axios-mock-server/commit/cc23d8158f43b1af2fd55ba09481b3e49c073aa9))
+* **deps:** bump url-search-params-polyfill from 8.0.0 to 8.1.0 ([42e6e71](https://github.com/solufa/axios-mock-server/commit/42e6e71cd98549d038eabf6e8fce99cdc8f3ab15))
+
+
+### Refactors
+
+* clarify dev command ([efcd257](https://github.com/solufa/axios-mock-server/commit/efcd257ef82f65c9b5bbb1bc2b286b6c3855930f))
+* clarify listFiles ([d715a7f](https://github.com/solufa/axios-mock-server/commit/d715a7f3de7e6ba1ebc1324037be17573f4f28c6))
+
 ### [0.16.3](https://github.com/solufa/axios-mock-server/compare/v0.16.2...v0.16.3) (2019-11-06)
 
 
