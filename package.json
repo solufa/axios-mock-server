@@ -28,10 +28,8 @@
     "release": "standard-version --skip.tag",
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
-    "test": "jest",
-    "test:watch": "npm test -- --watch",
-    "test:types": "tsc --noEmit",
-    "test:types:watch": "tsc --watch --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "jest"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.1",
