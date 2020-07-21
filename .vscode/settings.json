@@ -1,4 +1,8 @@
 {
+  "eslint.run": "onSave",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "files.associations": {
     ".mockserverrc": "json"
   }
