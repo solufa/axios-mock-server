@@ -269,7 +269,7 @@ describe('initialize', () => {
 
     const elapsedTime = Date.now() - startTime
     expect(elapsedTime).toBeGreaterThanOrEqual(delayTime - 1)
-    expect(elapsedTime).toBeLessThan(delayTime + 100)
+    expect(elapsedTime).toBeLessThan(delayTime + 20)
   })
 
   test('async methods', async () => {
