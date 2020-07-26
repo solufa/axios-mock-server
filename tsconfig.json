@@ -9,11 +9,14 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "dist",
-    "paths": { "~/*": ["./*"] },
+    "paths": {
+      "~/*": ["./*"],
+      "axios-mock-server": ["src"]
+    },
     "resolveJsonModule": true,
     "sourceMap": true,
     "strict": true,
     "target": "es5"
   },
-  "exclude": ["node_modules", "dist", "examples", "__tests__/lib/mocks/$mock.ts"]
+  "exclude": ["node_modules", "dist", "examples"]
 }
