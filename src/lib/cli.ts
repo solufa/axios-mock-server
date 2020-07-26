@@ -1,4 +1,4 @@
-import fs from 'fs'
+import path from 'path'
 import minimist from 'minimist'
 import getConfig from './getConfig'
 import getInputs from './getInputs'
@@ -16,23 +16,15 @@ export const run = (args: string[]) => {
   const config = getConfig(argv.config)
 
   if (argv.version !== undefined) {
-    console.log(`v${require('../../package').version}`)
+    console.log(`v${require(path.join(__dirname, '../../package.json')).version}`)
   }
 
   if (argv.build !== undefined || argv.watch !== undefined) {
     getInputs(config.input).forEach(input => {
-      let prevResult = build(input, config, argv.baseurl)
-      write(prevResult)
+      write(build(input, config, argv.baseurl))
 
       if (argv.watch !== undefined) {
-        watch(input, () => {
-          const result = build(input, config, argv.baseurl)
-
-          if (prevResult.text !== result.text || prevResult.filePath !== result.filePath) {
-            fs.unlink(prevResult.filePath, () => write(result))
-            prevResult = result
-          }
-        })
+        watch(input, () => write(build(input, config, argv.baseurl)))
       }
     })
   }
