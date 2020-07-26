@@ -8,7 +8,7 @@
   "bin": "bin/index.js",
   "scripts": {
     "dev": "npm run build && node bin/index.js -c devConfigs/.js.rc -b -u https://example.com/api && node bin/index.js -c devConfigs/.ts.rc -b -u https://example.com/api",
-    "build": "node -e \"require('fs').rmdirSync('dist', { recursive: true })\" && tsc --project tsconfig.build.json",
+    "build": "node -e \"require('fs').rmdirSync('dist', { recursive: true })\" && tsc -p tsconfig.build.json",
     "release": "standard-version --skip.tag",
     "release:major": "npm run release -- --release-as major",
     "release:minor": "npm run release -- --release-as minor",
