@@ -5,13 +5,12 @@ import build from '~/src/lib/buildRouteFile'
 
 describe('cli', () => {
   test('version command', () => {
-    const spyLog = jest.spyOn(console, 'log').mockImplementation(x => x)
+    const spyLog = jest.spyOn(console, 'log')
     const args = ['--version']
 
     run(args)
     expect(console.log).toHaveBeenCalledWith(`v${version}`)
 
-    spyLog.mockReset()
     spyLog.mockRestore()
   })
 
