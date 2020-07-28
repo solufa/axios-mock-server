@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { version } from '../../package.json'
+import { version } from '~/package.json'
 import { run } from '~/src/lib/cli'
 import build from '~/src/lib/buildRouteFile'
 
