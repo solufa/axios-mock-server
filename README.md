@@ -130,14 +130,13 @@ In other words, the `mocks/users/_userId.js` file **can define an endpoint using
 
 #### Build API
 
-axios-mock-server needs to build and generate the necessary files for routing before running.  
-From the command line, pass the `--build` option to axios-mock-server to start the build.
+axios-mock-server needs to build and generate the necessary files for routing before running.
 
 ```sh
-$ node_modules/.bin/axios-mock-server --build
+$ node_modules/.bin/axios-mock-server
 
 # If Windows (Command Prompt)
-> node_modules\.bin\axios-mock-server --build
+> node_modules\.bin\axios-mock-server
 ```
 
 If the build is successful, the `$mock.js` file is generated in the`mocks` directory.
@@ -448,15 +447,6 @@ The following options can be specified in the Command Line Interface.
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td nowrap><code>--build</code><br /><code>-b</code></td>
-      <td></td>
-      <td></td>
-      <td>
-        Generate <code>$mock.js</code> or <code>$mock.ts</code> required for
-        axios-mock-server routing.
-      </td>
-    </tr>
     <tr>
       <td nowrap><code>--config</code><br /><code>-c</code></td>
       <td><code>string</code></td>

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.18.0](https://github.com/solufa/axios-mock-server/compare/v0.17.2...v0.18.0) (2020-07-28)
+
+
+### Features
+
+* optimize build command ([0d93bde](https://github.com/solufa/axios-mock-server/commit/0d93bded96c992ef774d3bf619aa668fb5883b23))
+
 ### [0.17.2](https://github.com/solufa/axios-mock-server/compare/v0.17.1...v0.17.2) (2020-07-26)
 
 

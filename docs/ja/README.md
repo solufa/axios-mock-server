@@ -131,13 +131,12 @@ axios-mock-server のルーティングは [Nuxt.js][nuxtjs] のルーティン�
 #### API のビルド
 
 axios-mock-server は実行前にルーティングに必要なファイルをビルドして生成する必要があります。  
-コマンドラインから axios-mock-server に `--build` オプションを渡してビルドを開始します。
 
 ```sh
-$ node_modules/.bin/axios-mock-server --build
+$ node_modules/.bin/axios-mock-server
 
 # Windows の場合（コマンド プロンプト）
-> node_modules\.bin\axios-mock-server --build
+> node_modules\.bin\axios-mock-server
 ```
 
 ビルドが成功すると `$mock.js` ファイルが `mocks` ディレクトリの中に生成されています。
@@ -445,15 +444,6 @@ Command Line Interface では以下のオプションを指定することがで
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td nowrap><code>--build</code><br /><code>-b</code></td>
-      <td></td>
-      <td></td>
-      <td>
-        axios-mock-server のルーティングに必要な <code>$mock.js</code>、または
-        <code>$mock.ts</code> を生成します。
-      </td>
-    </tr>
     <tr>
       <td nowrap><code>--config</code><br /><code>-c</code></td>
       <td><code>string</code></td>

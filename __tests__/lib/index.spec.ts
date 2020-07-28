@@ -11,11 +11,6 @@ describe('cli', () => {
     expect(console.log).toHaveBeenCalled()
 
     spyLog.mockReset()
-
-    run([])
-    expect(console.log).not.toHaveBeenCalled()
-
-    spyLog.mockReset()
     spyLog.mockRestore()
   })
 
@@ -64,7 +59,7 @@ describe('cli', () => {
       const result = fs.readFileSync(resultFilePath, 'utf8')
       const { text, filePath } = build(config.input, config, 'https://example.com/api')
 
-      expect(text).toBe(result.includes('\r\n') ? result.replace(/\r\n/g, '\n') : result)
+      expect(text).toBe(result.replace(/\r/g, ''))
       expect(filePath).toBe(resultFilePath)
     })
   })

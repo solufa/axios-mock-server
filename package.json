@@ -1,6 +1,6 @@
 {
   "name": "axios-mock-server",
-  "version": "0.17.2",
+  "version": "0.18.0",
   "description": "RESTful mock server using axios",
   "author": "Solufa <solufa2020@gmail.com>",
   "license": "MIT",
@@ -92,7 +92,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jest": "^23.18.2",
+    "eslint-plugin-jest": "^23.19.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
