@@ -14,16 +14,15 @@ export const run = (args: string[]) => {
   const argv = minimist(args, options)
   const config = getConfig(argv.config)
 
-  ;(argv.version !== undefined
-    ? () => console.log(`v${require('../../package.json').version}`)
+  // eslint-disable-next-line no-unused-expressions
+  argv.version !== undefined
+    ? console.log(`v${require('../../package.json').version}`)
     : argv.watch !== undefined
-    ? () =>
-        getInputs(config.input).forEach(input => {
-          write(build(input, config, argv.baseurl))
-          watch(input, () => write(build(input, config, argv.baseurl)))
-        })
-    : () =>
-        getInputs(config.input)
-          .map(input => build(input, config, argv.baseurl))
-          .forEach(write))()
+    ? getInputs(config.input).forEach(input => {
+        write(build(input, config, argv.baseurl))
+        watch(input, () => write(build(input, config, argv.baseurl)))
+      })
+    : getInputs(config.input)
+        .map(input => build(input, config, argv.baseurl))
+        .forEach(write)
 }
