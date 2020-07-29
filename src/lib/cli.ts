@@ -1,4 +1,3 @@
-import path from 'path'
 import minimist from 'minimist'
 import getConfig from './getConfig'
 import getInputs from './getInputs'
@@ -16,7 +15,7 @@ export const run = (args: string[]) => {
   const config = getConfig(argv.config)
 
   ;(argv.version !== undefined
-    ? () => console.log(`v${require(path.join(__dirname, '../../package.json')).version}`)
+    ? () => console.log(`v${require('../../package.json').version}`)
     : argv.watch !== undefined
     ? () =>
         getInputs(config.input).forEach(input => {
