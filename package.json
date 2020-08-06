@@ -103,7 +103,7 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "chokidar": "^3.4.1",
+    "chokidar": "^3.4.2",
     "minimist": "^1.2.5",
     "url-search-params-polyfill": "^8.1.0"
   }
