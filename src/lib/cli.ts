@@ -5,13 +5,11 @@ import build from './buildRouteFile'
 import write from './writeRouteFile'
 import watch from './watchInputDir'
 
-const options: minimist.Opts = {
-  string: ['version', 'config', 'watch', 'baseurl'],
-  alias: { v: 'version', c: 'config', w: 'watch', u: 'baseurl' }
-}
-
 export const run = (args: string[]) => {
-  const argv = minimist(args, options)
+  const argv = minimist(args, {
+    string: ['version', 'config', 'watch', 'baseurl'],
+    alias: { v: 'version', c: 'config', w: 'watch', u: 'baseurl' }
+  })
   const config = getConfig(argv.config)
 
   // eslint-disable-next-line no-unused-expressions
