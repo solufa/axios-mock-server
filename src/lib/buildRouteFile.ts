@@ -14,10 +14,11 @@ const getTarget = (filePath?: string) =>
 const findExportingFile = (filePaths: string[]) =>
   filePaths.find(filePath => /export/.test(fs.readFileSync(filePath, 'utf8')))
 
-const getMockFilePaths = (input: string) =>
+const getMockFilePaths = (input: string, filename = '') =>
   listFiles(input)
     .filter(
       filePath =>
+        filePath !== filename &&
         !mockFileRegExp.test(filePath) &&
         /^\.(js|ts)$/.test(path.extname(filePath)) &&
         /(\n|^)(export default|module.exports)/.test(fs.readFileSync(filePath, 'utf8'))
@@ -26,9 +27,10 @@ const getMockFilePaths = (input: string) =>
     .reverse()
 
 export default (input: string, config: Config, baseURL = '') => {
-  const mockFilePaths = getMockFilePaths(input)
+  const mockFilePaths = getMockFilePaths(input, config.outputFilename)
   const ext =
     config.outputExt ||
+    (config.outputFilename ?? '').split('.').pop() ||
     (mockFilePaths[0] ? path.extname(mockFilePaths[0]).slice(1) : defaultConfig.outputExt)
   const text = createRouteString(
     input,
@@ -38,5 +40,5 @@ export default (input: string, config: Config, baseURL = '') => {
     baseURL
   )
 
-  return { text, filePath: path.posix.join(input, `$mock.${ext}`) }
+  return { text, filePath: path.posix.join(input, config.outputFilename ?? `$mock.${ext}`) }
 }

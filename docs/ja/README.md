@@ -503,6 +503,12 @@ Command Line Interface では以下のオプションを指定することがで
       </td>
     </tr>
     <tr>
+      <td><code>outputFilename</code></td>
+      <td><code>string</code></td>
+      <td>$mock.{outputExt}</td>
+      <td>生成するファイル名を指定します。</td>
+    </tr>
+    <tr>
       <td><code>target</code></td>
       <td><code>"es6" | "cjs"</code></td>
       <td></td>

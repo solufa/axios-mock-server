@@ -506,6 +506,12 @@ Settings are written in `.mockserverrc` file with JSON syntax.
       </td>
     </tr>
     <tr>
+      <td><code>outputFilename</code></td>
+      <td><code>string</code></td>
+      <td>$mock.{outputExt}</td>
+      <td>Specify the filename to be generated.</td>
+    </tr>
+    <tr>
       <td><code>target</code></td>
       <td><code>"es6" | "cjs"</code></td>
       <td></td>
