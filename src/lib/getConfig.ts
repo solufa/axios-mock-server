@@ -4,6 +4,7 @@ export type Config = {
   input?: string | string[]
   target?: 'es6' | 'cjs'
   outputExt?: 'js' | 'ts'
+  outputFilename?: string
 }
 
 export const mockFileRegExp = /\/(\$|@)/

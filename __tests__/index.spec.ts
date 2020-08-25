@@ -326,7 +326,7 @@ describe('initialize', () => {
   })
 
   test('enable log', async () => {
-    const spyLog = jest.spyOn(console, 'log').mockImplementation(x => x)
+    const spyLog = jest.spyOn(console, 'log')
     const testPath = '/test'
     const route: MockRoute = [{ path: testPath, methods: { get: () => [204] } }]
 

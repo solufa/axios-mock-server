@@ -1,6 +1,6 @@
 {
   "name": "axios-mock-server",
-  "version": "0.18.1",
+  "version": "0.19.0",
   "description": "RESTful mock server using axios",
   "author": "Solufa <solufa2020@gmail.com>",
   "license": "MIT",
@@ -69,7 +69,6 @@
     "arrowParens": "avoid",
     "singleQuote": true,
     "trailingComma": "none",
-    "endOfLine": "auto",
     "overrides": [
       {
         "files": [
@@ -83,28 +82,28 @@
     ]
   },
   "devDependencies": {
-    "@types/jest": "^26.0.7",
+    "@types/jest": "^26.0.10",
     "@types/minimist": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "axios": "^0.19.2",
-    "eslint": "^7.5.0",
+    "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jest": "^23.19.0",
+    "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^25.5.4",
-    "prettier": "^2.0.5",
-    "standard-version": "^8.0.1",
+    "prettier": "^2.1.0",
+    "standard-version": "^9.0.0",
     "ts-jest": "^25.5.1",
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "chokidar": "^3.4.1",
+    "chokidar": "^3.4.2",
     "minimist": "^1.2.5",
     "url-search-params-polyfill": "^8.1.0"
   }
