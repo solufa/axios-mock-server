@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.19.0](https://github.com/solufa/axios-mock-server/compare/v0.18.1...v0.19.0) (2020-08-25)
+
+
+### Features
+
+* add outputFilename option ([763be9f](https://github.com/solufa/axios-mock-server/commit/763be9fd8e9359c634c919bee7b9a5c5c14e5adf))
+
+
+### Bug Fixes
+
+* **deps:** bump chokidar from 3.4.1 to 3.4.2 ([b85074a](https://github.com/solufa/axios-mock-server/commit/b85074acd8e11a1f55278fe82dbf63aedfe8e8d5))
+
 ### [0.18.1](https://github.com/solufa/axios-mock-server/compare/v0.18.0...v0.18.1) (2020-07-28)
 
 
