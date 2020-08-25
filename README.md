@@ -508,7 +508,7 @@ Settings are written in `.mockserverrc` file with JSON syntax.
     <tr>
       <td><code>outputFilename</code></td>
       <td><code>string</code></td>
-      <td>"$mock.js" | "$mock.ts"</td>
+      <td><code>"$mock.js" or "$mock.ts"</code></td>
       <td>Specify the filename to be generated.</td>
     </tr>
     <tr>

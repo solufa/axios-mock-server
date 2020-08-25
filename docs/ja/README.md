@@ -505,7 +505,7 @@ Command Line Interface では以下のオプションを指定することがで
     <tr>
       <td><code>outputFilename</code></td>
       <td><code>string</code></td>
-      <td>"$mock.js" | "$mock.ts"</td>
+      <td><code>"$mock.js" or "$mock.ts"</code></td>
       <td>生成するファイル名を指定します。</td>
     </tr>
     <tr>
