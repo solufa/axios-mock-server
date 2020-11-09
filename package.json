@@ -83,7 +83,7 @@
   },
   "devDependencies": {
     "@types/jest": "^26.0.15",
-    "@types/minimist": "^1.2.0",
+    "@types/minimist": "^1.2.1",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "axios": "^0.19.2",
