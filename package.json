@@ -94,7 +94,7 @@
     "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-promise": "^4.3.0",
     "eslint-plugin-standard": "^4.1.0",
     "jest": "^25.5.4",
     "prettier": "^2.2.1",
