@@ -99,7 +99,7 @@
     "jest": "^25.5.4",
     "prettier": "^2.2.1",
     "standard-version": "^9.1.0",
-    "ts-jest": "^25.5.1",
+    "ts-jest": "^26.5.1",
     "typescript": "^3.9.9"
   },
   "dependencies": {
