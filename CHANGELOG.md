@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.19.1](https://github.com/solufa/axios-mock-server/compare/v0.19.0...v0.19.1) (2021-02-13)
+
+
+### Bug Fixes
+
+* lint and typecheck error ([612b1bc](https://github.com/solufa/axios-mock-server/commit/612b1bc6c7c07240f293b6d185eef642d01ffc70))
+* **deps:** [security] bump ini from 1.3.5 to 1.3.7 ([e2874d2](https://github.com/solufa/axios-mock-server/commit/e2874d2fb51cd2807860745bd6894a6844110ba7))
+* **deps:** bump chokidar from 3.4.2 to 3.4.3 ([acfe4c4](https://github.com/solufa/axios-mock-server/commit/acfe4c406140ef2992f2ad20aa2e841623017fec))
+
+
+### Documentation
+
+* update README ([1e56cce](https://github.com/solufa/axios-mock-server/commit/1e56cceb414b71b1caf0e9b7a20f37f7948319a1))
+
 ## [0.19.0](https://github.com/solufa/axios-mock-server/compare/v0.18.1...v0.19.0) (2020-08-25)
 
 
