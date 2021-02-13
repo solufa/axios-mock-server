@@ -12,7 +12,7 @@ export default class {
   private handlersSet: HandlersSet = {}
   private delayTime = 0
   private needsLog = false
-  private client!: AxiosInstance
+  private client?: AxiosInstance
   private originalAdapter?: AxiosAdapter
   private baseURL = ''
 
@@ -92,6 +92,8 @@ export default class {
   }
 
   public restore() {
+    if (!this.client) return
+
     this.reset()
     delete this.client.defaults.adapter
 

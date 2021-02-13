@@ -1,6 +1,5 @@
 import axios from 'axios'
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore: Cannot find module
 import mock from '../mocks/$mock'
 
