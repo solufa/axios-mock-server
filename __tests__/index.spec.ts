@@ -306,7 +306,11 @@ describe('initialize', () => {
       {
         path: 'type-error-test',
         methods: {
-          get: () => asyncResponse(200, new Promise(resolve => resolve())),
+          get: () =>
+            asyncResponse(
+              200,
+              new Promise<void>(resolve => resolve())
+            ),
           async post() {
             await sleep(100)
             return [errorStatus] as MockResponse
