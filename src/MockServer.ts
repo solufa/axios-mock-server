@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosAdapter } from 'axios'
-import settle from 'axios/lib/core/settle'
+import settle from './settle'
 import { HandlersSet, MockRoute, httpMethods } from './types'
 import createLogString from './createLogString'
 import makeResponse from './makeResponse'
