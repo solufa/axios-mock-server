@@ -13,7 +13,7 @@ export default (mockRes: MockResponse, config: AxiosRequestConfig): AxiosRespons
     status,
     statusText: `${status}`,
     data: copyData(data),
-    headers,
+    headers: headers || {},
     config
   }
 }
